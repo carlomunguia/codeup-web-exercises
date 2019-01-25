@@ -1,4 +1,38 @@
-h1{
-    color: purple;
+h1 {
+    color: darkturquoise;
+    text-decoration: none;
+    font-family: 'Major Mono Display', monospace;
+    text-align: center;
+    text-underline: red;
+}
 
+#container h1.fancy-header {
+    background-color: aqua;
+}
+
+li {
+    list-style: circle;
+}
+
+em {
+    font-weight: bold;
+}
+
+body {
+    font-family: 'Major Mono Display', monospace;
+    background-image: url("../img/shihtzu1.jpeg");
+    color: darkturquoise;
+}
+
+table {
+    width: 3em;
+    height: 3em;
+    padding: 3em;
+    font-size: large;
+}
+tr {
+    border: 1px black;
+}
+.article > a {
+    float: right;
 }
