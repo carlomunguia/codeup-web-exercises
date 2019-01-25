@@ -1,9 +1,9 @@
 h1 {
-    color: darkturquoise;
-    text-decoration: none;
+    color: blue;
+    text-underline-color: purple ;
     font-family: 'Major Mono Display', monospace;
     text-align: center;
-    text-underline: red;
+    : red;
 }
 
 #container h1.fancy-header {

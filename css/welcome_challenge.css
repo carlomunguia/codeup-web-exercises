@@ -1,0 +1,49 @@
+h1 {
+    text-shadow: 2px 2px magenta;
+    letter-spacing: 2px;
+    text-align: center;
+    font-family: "American Typewriter";
+    background-color: white;
+    border-radius: 25px;
+    font-size: 3em;
+}
+
+h2 {
+    color: darkseagreen;
+}
+
+#wrapper:first-child ul {
+    text-decoration: underline;
+    text-decoration-color: blue;
+}
+
+body {
+    background-color: #A4E3E8;
+    font-family: "American Typewriter";
+    color: darkblue;
+}
+
+section:nth-child(2) {
+    background-color: aliceblue;
+}
+
+section:nth-child(5) {
+    text-align: center;
+}
+
+img:nth-child(2) {
+    transform: rotate(20deg); translateX(-80px) translateY(-100px)
+}
+
+img:nth-child(3) {
+    transform: rotate(20deg); translateX(-100px) translateY(-100px)
+}
+
+img:nth-child(5) {
+    transform: rotate(20deg); translateX(-80px) translateY(-100px)
+}
+
+img:nth-child(6) {
+    transform: rotate(20deg); translateX(-100px) translateY(-100px)
+
+}
