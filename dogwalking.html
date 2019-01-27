@@ -1,32 +1,64 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
+
 <head>
     <meta charset="UTF-8">
     <title>Dog Walking Service: Register</title>
+    <link rel="stylesheet" href="dogwalking.css">
+
 </head>
+
 <body>
 
 <main>
+
+    <link rel="stylesheet" href="css/dogwalking.css">
+    <img src="img/shihtzu1.jpeg" alt="shih tzu">
+
+
     <header>
         <h1> Register Your Dog!</h1>
     </header>
+
     <br>
     <br>
+
     <form method="POST" action="https://request-inspector.glitch.me/">
+
         <label name="Your Dog's Name" value="True">Your Dog's Name</label>
         <input type="Dog Name" placeholder="Your Dogs Name Here">
         <label name="Email Address" value="email">Email Address</label>
         <input type="email" name="email" placeholder="Your Email Here">
+
         <br>
+        <br>
+        <br>
+
         <header>
             <h2>Services We Offer</h2>
         </header>
-        <select>
-            <option name="Short Dog Walk" value="Short Dog Walk" placeholder="Short Dog Walk">Short Dog Walk</option>
-            <option name="Medium Dog Walk" value="Medium Dog Walk" placeholder="Medium Dog Walk">Medium Dog Walk
-            </option>
-            <option name="Long Dog Walk" value="Long Dog Walk" placeholder="Long Dog Walk">Long Dog Walk</option>
-        </select>
+
+        <div>
+            <select>
+                <option name="Short Dog Walk" value="Short Dog Walk" placeholder="Short Dog Walk">Short Dog Walk
+                </option>
+                <option name="Medium Dog Walk" value="Medium Dog Walk" placeholder="Medium Dog Walk">Medium Dog Walk
+                </option>
+                <option name="Long Dog Walk" value="Long Dog Walk" placeholder="Long Dog Walk">Long Dog Walk</option>
+            </select>
+        </div>
+        <div>
+            <form>
+                <fieldset>
+                    <legend>Personalia:</legend>
+                    Name: <input type="text"><br>
+                    Email: <input type="text"><br>
+                    Date of birth: <input type="text">
+                </fieldset>
+                <input type="submit">
+            </form>
+
+
 </main>
 </body>
 </html>

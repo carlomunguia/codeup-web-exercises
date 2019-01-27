@@ -1,0 +1,12 @@
+body {
+    background-color: darkseagreen;
+    text-align: center;
+    font-family: "Coiny Cyrillic";
+    text-shadow: red ; 40em;
+    color: aqua;
+}
+
+img {
+    transform: rotate(180deg);
+}
+
