@@ -5,30 +5,33 @@ body, html {
     margin: 0;
     font-family: Arial, Ubuntu, sans-serif;
 
-    --bg-info:#CCDCFF;
-    --bg-success:#C5F7DA;
-    --bg-warning:#FAFEC7;
-    --bg-error:#FFCFD6;
+    --bg-info: #CCDCFF;
+    --bg-success: #C5F7DA;
+    --bg-warning: #FAFEC7;
+    --bg-error: #FFCFD6;
 }
 
 
-.message{
-      width: 100%;
-      height: auto;
-      margin: 10px;
-      padding:10px;
-      border-radius: 5px;
+.message {
+    width: 100%;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
 }
 
-.message-info{
+.message-info {
     background-color: var(--bg-info);
 }
-.message-success{
+
+.message-success {
     background-color: var(--bg-success);
 }
-.message-warning{
+
+.message-warning {
     background-color: var(--bg-warning);
 }
-.message-error{
+
+.message-error {
     background-color: var(--bg-error);
 }
