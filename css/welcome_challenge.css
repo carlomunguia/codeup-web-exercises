@@ -31,19 +31,11 @@ section:nth-child(5) {
     text-align: center;
 }
 
-img:nth-child(2) {
+img:nth-child(2), img:nth-child(5) {
     transform: rotate(20deg); translateX(-80px) translateY(-100px)
 }
 
-img:nth-child(3) {
+img:nth-child(3), img:nth-child(6) {
     transform: rotate(20deg); translateX(-100px) translateY(-100px)
 }
 
-img:nth-child(5) {
-    transform: rotate(20deg); translateX(-80px) translateY(-100px)
-}
-
-img:nth-child(6) {
-    transform: rotate(20deg); translateX(-100px) translateY(-100px)
-
-}

@@ -1,6 +1,1 @@
-print{
-    (Hello World!)
-}
-
-
-("Hello World")
+console.log (hrl)
