@@ -35,7 +35,8 @@ a {
     background: var(--light-bg);
     position: fixed;
     width: 100%;
-    z-index: 1000;
+    z-index: 1;
+
 }
 
 .nav {
@@ -99,12 +100,10 @@ a {
 }
 
 .profile-image {
-    line-height: 80px;
     position: absolute;
-    float: left;
     margin-left: .5em;
     margin-right: .5em;
-    width: calc(25% - 1em);
+    top: 235px;
 }
 
 .timeline {
@@ -122,15 +121,38 @@ a {
 }
 
 #container {
-    margin-bottom: 2em;
+    margin-top: 2em;
+    float: right;
 }
 
 .profile-form {
-
+    line-height: 80px;
 }
 
-.media, #container {
+.media {
     width: 100%;
-    background: var(--light-bg);
+    background-color: var(--light-bg);
+    border: 1px solid var(--separator-color);
+    padding: 1em;
+    float: right;
+    overflow: auto;
+}
 
+.media-image{
+    width: 50px;
+    float: left;
+    margin: 1.33em 0 0 0;
+}
+
+.media-body{
+    float: left;
+    width: calc(100% - 50px;
+}
+
+.profile-items{
+    list-style: none;
+}
+
+.profile-entry{
+    margin:.5em;
 }
