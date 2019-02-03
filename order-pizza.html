@@ -7,40 +7,36 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
           integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <title>Order Pizza!</title>
-
 </head>
-<nav class="navbar navbar-expand-sm navbar-light bg-light ">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Pizza world</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <form class="form-inline">
-        <a class="navbar-brand" href="#">Pizza World</a>
+        <a class="navbar-brand" href="#"></a>
         <nav class="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <nav class="navbar-nav mr-auto mt-2 mt-sm-0">
+            <nav class="navbar-nav mr-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Order Online</a>
                 <li class="nav-item-active">
                     <a class="nav-link" href="#">Menu<span class="sr-only">(current)</span></a>
                 </li>
-                <input class="form-control mr-sm-2" type="search" placeholder="Zipcode" aria-label="Zipcode">
+                <input class="form-control " type="search" placeholder="Zipcode" aria-label="Zipcode">
             </nav>
             <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Signup</button>
         </nav>
-        <main class="container">
-            <header class="pizza-image"></header>
-            <div class="jumbotron jumbotron-fluid pizza">
-                    <img src="img/pizza.png" class="img-fluid" alt="Responsive image">
 
-                    <h1 class="display-4">Welcome to Pizza World</h1>
-                    <p>Welcome to Pizza World!</p>
-                </div>
-                <div>
-                    <h2 class="display-4">Build Your Own Pizza</h2>
-                </div>
-        </main>
+        <header class="container d-none d-md-block mt-3">
+            <div class="jumbotron pizza-img px-0">
+                <h1 class="text-center font-weight-normal">Welcome to Pizza World!</h1>
+            </div>
+        </header>
         <hr>
+    </form>
         <form action="" method="post">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
@@ -83,40 +79,41 @@
                 <div class="card-header">Hand Tossed</div>
                 <div class="card-body">Garlic seasoned crust with a rich, buttery taste</div>
                 <ul class="list-group">
-                    </li>
                     <li class="list-group-item">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="crust" value="hand-sm" id="hand-sm">
+                            <input class="form-check-input" type="radio" name="hand-sm" value="hand-sm" id="hand-sm">
                             <label class="form-check-label" for="hand-sm">Small(10")</label>
                     <li class="list-group-item">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="crust" value="hand-md" id="hand-md">
-                            <label class="form-check-label" for="hand-sm">Medium(12")</label>
-                    </li>
+                            <input class="form-check-input" type="radio" name="hand-md" value="hand-md" id="hand-md">
+                            <label class="form-check-label" for="hand-md">Medium(12")</label>
+                        </div>
                     <li class="list-group-item">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="crust" value="hand-lg" id="hand-lg">
-                            <label class="form-check-label" for="hand-sm">Large(14")</label>
+                            <input class="form-check-input" type="radio" name="hand-lg" value="hand-lg" id="hand-lg">
+                            <label class="form-check-label" for="hand-lg">Large(14")</label>
+                        </div>
                 </ul>
             </div>
-            <div class="card">
+            <div class="card"></div>
                 <div class="card-header">Crispy Thin</div>
                 <div class="card-body">Thin enough for Cripsy to Crunchy Ratio</div>
                 <ul class="list-group">
                     <li class="list-group-item">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="crust" value="hand-md" id="hand-md">
-                            <label class="form-check-label" for="hand-sm">Medium(12")</label>
+                            <input class="form-check-input" type="radio" name="hand-md" value="hand-md" id="medium">
+                            <label class="form-check-label" for="hand-md">Medium(12")</label>
+                        </div>
                     <li class="list-group-item">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="crust" value="hand-lg" id="hand-lg">
-                            <label class="form-check-label" for="hand-sm">Large(14")</label>
-                    </li>
+                            <input class="form-check-input" type="radio" name="hand-lg" value="hand-lg">
+                            <label class="form-check-label" for="hand-lg">Large(14")</label>
+                        </div>
                 </ul>
                 <div class="card-footer text-right">
                     <a class="btn btn-primary" href="#" role="button">Next Step</a>
                 </div>
-                <div class="card">
+            <div class="card"></div>
                     <div class="card-header bg-primary text-white">
                         Choose Meats
                     </div>
@@ -131,6 +128,7 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="ham" value="Ham" id="Ham">
                                     <label class="form-check-label" for="Ham">Ham</label>
+                                </div>
                             </li>
                             <li class="list-group-item">
                                 <div class="form-check">
@@ -141,9 +139,10 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="bacon" value="bacon" id="Bacon">
                                     <label class="form-check-label" for="Bacon">Bacon</label>
+                                </div>
                         </ul>
                     </div>
-                    <div class="card">
+            <div class="card"></div>
                         <div class="card-header bg-primary text-white">Choose Non Meats</div>
                         <ul class="list-group">
                             <li class="list-group-item">
@@ -151,23 +150,27 @@
                                     <input class="form-check-input" type="radio" name="greenpepper" value="greenpepper"
                                            id="greenpepper">
                                     <label class="form-check-label" for="greenpepper">Green Pepper</label>
+                                </div>
                             <li class="list-group-item">
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="mushrooms" value="mushroonms"
                                            id="mushrooms">
                                     <label class="form-check-label" for="mushrooms">Mushrooms</label>
+                                </div>
                             </li>
                             <li class="list-group-item">
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="onions" value="onions"
                                            id="onions">
                                     <label class="form-check-label" for="onions">Onions</label>
+                                </div>
                             </li>
                             <li class="list-group-item">
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="jalapenos" value="jalapenos"
                                            id="jalapenos">
                                     <label class="form-check-label" for="jalapenos">Jalapenos</label>
+                                </div>
                             </li>
                             <div class="card-footer text-right">
                                 <a class="btn btn-primary" href="#" role="button">Checkout</a>

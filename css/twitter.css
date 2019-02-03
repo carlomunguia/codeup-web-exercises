@@ -78,12 +78,13 @@ a {
     padding: 8px;
     border-radius: 5px;
     position: absolute;
-
+    float: right;
 }
 
 .btn-large {
     font-size: 1.3em;
     padding: 10px;
+    float: right;
 }
 
 .img-circle {
@@ -92,7 +93,7 @@ a {
 }
 
 .text-right {
-    text-align: right;
+    float: right;
 }
 
 .text-muted {
