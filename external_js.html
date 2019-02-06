@@ -19,6 +19,7 @@
     }
     else
         alert("TOO many characters, yo.");
+
     }
 
     var password = prompt("What is your password?");
@@ -28,8 +29,17 @@
         alert("Password is too weak, homie!");
     }
 
-    var Google =
+var rentalPerDayDollars = prompt("What is the rental date per day in dollars?");
+    var littleMermaidDays = prompt("How many days was Little Mermaid rented for?");
+    var brotherBearDays = prompt("How many days was Brother Bear rented for?");
+    var herculesDays = prompt("How many days was Hercules rented for?");
+    var totalRentalCost;
 
+
+    totalRentalCost = (+littleMermaidDays + +brotherBearDays + +herculesDays) *
+            rentalPerDayDollars;
+
+    alert(totalRentalCost);
 
 </script>
 </body>
