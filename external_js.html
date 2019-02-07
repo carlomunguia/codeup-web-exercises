@@ -10,20 +10,20 @@
 <script src="js/external.js"></script>
 <script>
 
-    var five_pass_Char = password <= 5;
-    var twenty_un_Char = username <= 20;
+    // variables
+    var twenty_un_Char = 'true' ;
+    var five_pass_Char = 'true' ;
 
-    var username = prompt("What is your username?");
-    if (twenty_un_Char == true) {
+    var twenty_un_Char = prompt("What is your username?");
+    if (twenty_un_Char <= 20) {
         alert("Good to Go, Boss.");
     }
-    else
-        alert("TOO many characters, yo.");
-
+    else {
+        alert ("TOO many characters, yo.");
     }
 
-    var password = prompt("What is your password?");
-    if (five_pass_Char == true) {
+    var five_pass_Char = prompt("What is your password?");
+    if (five_pass_Char >= 5) {
         alert("Good to go, my man.");
     } else {
         alert("Password is too weak, homie!");
@@ -39,7 +39,20 @@ var rentalPerDayDollars = prompt("What is the rental date per day in dollars?");
     totalRentalCost = (+littleMermaidDays + +brotherBearDays + +herculesDays) *
             rentalPerDayDollars;
 
-    alert(totalRentalCost);
+var googleHourlyRateDollars = prompt("What is the Google Hourly Rate in dollars?");
+var amazonHourlyRateDollars =  prompt("What is the Amazon Hourly Rate in dollars?");
+var facebookHourlyRateDollars =  prompt("What is the Facebook Hourly Rate in dollars?");
+
+var googleHours;
+var amazonHours;
+
+var numberOfItems = prompt("Enter number of items bought");
+var offerIsValid = confirm("Offer is valid");
+var isPremiumMember = confirm("Is a Premium Member");
+
+var productDiscountApplied = (isPremiumMember || Number(numberOfItems) > 2) && offerIsValid;
+
+alert("Product discount status: " + productDiscountApplied);
 
 </script>
 </body>
