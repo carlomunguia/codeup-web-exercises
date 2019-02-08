@@ -5,7 +5,10 @@ var message = confirm("Would you like to enter a number?");
 if (message) {
     var number = prompt("Choose a number");
 
-    if (number % 2 == 0) {
+    if (!isNaN(number)){
+
+
+    if ((number % 2 == 0)) {
         alert("Your number is even");
     } else {
         alert("Your number is odd");
@@ -19,8 +22,9 @@ if (message) {
         alert("Your number is negative")
     }
 } else {
-    alert("Fine, be that way.")
-}
+        alert(!"Fine, be that way.")
+    }
+    }
 
 /**
  * TODO:
@@ -46,7 +50,7 @@ if (message) {
 //
 //
 
-
+// function anaylze
 
 
 /**
