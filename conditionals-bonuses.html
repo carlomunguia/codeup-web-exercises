@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+
+    function makeJustinMessage(input) {
+        if (input === "justin") {
+            return "You ARE Justin!";
+        } else if (input.indexOf(' ') >= 0 || /\d/.test(input)) {
+            return "INVALID INPUT";
+        } else {
+            return "You are SO not Justin!";
+        }
+    }
+
+    function streetLight(color) {
+        if (color.toLowerCase() === 'red') {
+            return ("YOU HAVE TO STOP!!!!");
+        } else if (color.toLowerCase() === 'green') {
+            return ("go go go go GO");
+        }
+    }
+
+    function almostReflexive(input) {
+        if (input === null || input === undefined) {
+            return "No Input Provided";
+        } else {
+            return input;
+        }
+    }
+
+    function givenDigit(input) {
+        if (input > 9) {
+            return ("TOO MANY DIGITS");
+        } else if (isNaN(parseFloat(input))){
+            return ("INVALID INPUT");
+        }
+    }
+
+
+</script>
+</body>
+</html>
