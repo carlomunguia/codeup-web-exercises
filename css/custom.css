@@ -1,6 +1,13 @@
 * {
-    box-sizing: border-box;
+    box-sizing: content-box;
+
 }
 
 
+* {
+    @media all and screen (max-width: 1200px) and (min-width: 520px) ;
+}
 
+.nav{
+
+}

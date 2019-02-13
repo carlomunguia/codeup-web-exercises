@@ -1,28 +1,28 @@
 "use strict";
 //
-// var message = confirm("Would you like to enter a number?");
-//
-// if (message) {
-//     var number = prompt("Choose a number");
-//
-//     if (!isNaN(number)) {
-//         if ((number % 2 == 0)) {
-//             alert("Your number is even");
-//         } else {
-//             alert("Your number is odd");
-//         }
-//
-//         alert("Here is your number, yo" + (+number + 100));
-//
-//         if (number > 0) {
-//             alert("Your number is positive");
-//         } else {
-//             alert("Your number is negative")
-//         }
-//     } else {
-//         alert(!"Fine, be that way.")
-//     }
-// }
+var message = confirm("Would you like to enter a number?");
+
+if (message) {
+    var number = prompt("Choose a number");
+
+    if (!isNaN(number)) {
+        if ((number % 2 == 0)) {
+            alert("Your number is even");
+        } else {
+            alert("Your number is odd");
+        }
+
+        alert("Here is your number, yo" + (+number + 100));
+
+        if (number > 0) {
+            alert("Your number is positive");
+        } else {
+            alert("Your number is negative")
+        }
+    } else {
+        alert(!"Fine, be that way.")
+    }
+}
 
 /**
  //  * TODO:
@@ -92,6 +92,10 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 alert(analyzeColor(randomColor));
 var input = prompt('Enter a Color, yo ');
 alert(analyzeColor(input));
+
+
+
+
 // // /**
 // //  * TODO:
 //  // * Pass the `randomColor` variable to your function and console.log the results.
