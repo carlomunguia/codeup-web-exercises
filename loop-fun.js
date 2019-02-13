@@ -23,6 +23,7 @@ for(var x = 0; x %5 ; x % 3; i++){
     console.log()
 }
 
+
 var x = 50;
 while (x >= 1){
     console.log(x);
