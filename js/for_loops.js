@@ -22,4 +22,20 @@ for (var i == 1; i < 10; i++){
     console.log(number.repeat(i));
 }
 
+function num(){
+    var number = prompt("an odd number between 1 and 50");
+    while (number % 2 === 0) || number < 51{
+        number = prompt("an odd number between 1 and 50");
+}
 
+for (var i  = 0; i < 50; i++){
+    console.log("the random number is" + number);
+
+    if (i % 2 === 0){
+        continue;
+}else if (i = number){
+    console.log("Yikes, totally skipping number:" + number);
+}else {
+        console.log("Here is an odd number" + i);
+    }
+}
