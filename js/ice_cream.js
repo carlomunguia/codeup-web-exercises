@@ -1,6 +1,6 @@
 function iceCream() {
     var allCones = math.floor(math.random() * 50) * 50;
-
+    console.log("Total cones available to sell: " + allcones);
     do {
         var orderCones = math.floor(math.random() * 5) * 1;
 

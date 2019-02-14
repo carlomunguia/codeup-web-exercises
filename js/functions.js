@@ -26,7 +26,7 @@
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
-// var random = Math.floor((Math.random() * 3) + 1);
+var random = Math.floor((Math.random() * 3) + 1);
 
 /**
  * TODO:
@@ -79,3 +79,44 @@
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+function sayHello(name) {
+    return "Hello " + name;
+}
+
+var sayHello = function(name) {
+    return "Hello, " + name;
+}
+
+var helloMessage = sayHello(name);
+var myName = "Carlo Munguia";
+
+console.log(sayHello(myName));
+
+function isTwo(num){
+    return num === 2;
+}
+console.log(isTwo(1));
+console.log(isTwo(2));
+console.log(isTwo(3));
+
+function calculateTip(tip, bill) {
+    return tip * bill;
+}
+
+console.log(calculateTip(0.20, 20));
+console.log(calculateTip(0.25, 25.50));
+console.log(calculateTip(0.15, 33.42));
+
+var bill = prompt("What is the bill amount?");
+var tip = prompt("What is the tip amount?");
+
+var formattedTip = (calculateTip(tip/100, bill) + "").toFixed(2);
+
+alert("The total tip is $" + formattedTip);
+
+function applyDiscount(price, discountPercentage) {
+    return price - (price * discountPercentage);
+}
+console.log(applyDiscount(100, .2));
+console.log(applyDiscount(45.99, 0.12));
