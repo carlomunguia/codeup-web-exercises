@@ -27,3 +27,6 @@ soul('Love', 'Conviction');
 add('Harmony', 'Beauty');
 (soul('Mountain', 'Spring'));
 
+var mountain = ['big mountain', 'blue mountain', 'green mountain'];
+var mountainArray;
+
