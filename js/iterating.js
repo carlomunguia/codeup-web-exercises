@@ -4,12 +4,29 @@
     var names = ['Alex', 'George', 'Kiryu', 'Goro'];
 
     for (var i = 0; i < names.length; i++) {
-        console.log(names[i])
+        console.log(names[i]);
     }
     names.forEach(function (element) {
         console.log(element)
     })
 })();
+
+function first(array){
+    return array;
+}
+
+function second(array){
+    return array[1];
+}
+
+function last(array){
+    return array[array.length - 1];
+}
+
+console.log(first)(names));
+console.log(second)names);
+console.log(last)(names));
+
 
 
 
