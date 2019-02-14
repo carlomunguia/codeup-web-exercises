@@ -12,3 +12,11 @@ for (var i  = 0; i < 50; i++){
 
 var dog = ['corgi', 'shih-tzu'];
 
+var = dogs = [
+
+    'corgi',
+    'shih-tzu',
+    'husky',
+    'golden retriever',
+    'other dogs'
+]
