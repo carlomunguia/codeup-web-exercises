@@ -1,22 +1,33 @@
-for (var i  = 0; i < 50; i++){
-    console.log("the random number is" + number);
-    if (i % 2 === 0){
+
+"use strict";
+
+var input;
+while(true){
+    input = prompt("Please enter an odd number between 1 - 50");
+    if(isNaN(input)){
+        alert("That is not a number. Try again");
         continue;
-    }else if (i = number){
-        console.log("Yikes, totally skipping number:" + number);
-    }else {
-        console.log("Here is an odd number" + i);
+    }
+    if(input < 1 || input > 50){
+        alert("That is out of range. Try again");
+        continue;
+    }
+    if(input % 2 === 0){
+        alert("Number must be odd. Try again");
+    }
+    else{
         break;
     }
 }
+console.log(input);
+for(var i = 1; i <= 50; i++){
+    if(i % 2 === 0){
+        continue;
+    }
+    if(i == input){
+        console.log("Yikes! Skipping: " + i);
+    }else{
+        console.log("Here is an odd number: " + i);
+    }
 
-var dog = ['corgi', 'shih-tzu'];
-
-var = dogs = [
-
-    'corgi',
-    'shih-tzu',
-    'husky',
-    'golden retriever',
-    'other dogs'
-]
+}

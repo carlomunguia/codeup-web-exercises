@@ -1,30 +1,34 @@
-function showMultiplicationTable() {
-
-    for (var i = 1, j = input, h = input;, i < 11; i++, h = j * i) {
-        console.log("7 " + "* " + i + " = " + h);
+"use strict";
+//showMultiplicationTable
+function showMultiplicationTable(x){
+    let b;
+    for(let a = 1; a <= 10; a++){
+        b = x*a;
+        console.log(x + " x " + a + " = " + b);
     }
 }
 
-showMultiplicationTable();
+showMultiplicationTable(7);
 
-function numbers(){
-
-for (var random = math.floor(math.random) * 200) * 20;
-if (random % 2 === 0) {
-    console.log(random + "is even");
-} else {
-    (console.log(random + "is odd);
-}
-continue;
-}
-
-for (var i == 1; i < 10; i++){
-    var number ="" +i;
-    console.log(number.repeat(i));
-}
-function num(){
-    var number = prompt("an odd number between 1 and 50");
-    while (number % 2 === 0) || number < 51{
-        number = prompt("an odd number between 1 and 50");
+//generate 10 numbers from 20 - 200 output if odd or even.
+for(let i = 1; i <= 10; i++){
+    let randomNumber = Math.floor(Math.random() * 200) + 20;
+    if(randomNumber % 2 === 0){
+        console.log(randomNumber + " is even.");
+    }else{
+        console.log(randomNumber + " is odd.");
+    }
 }
 
+//half-triangle of numbers
+for (let i = 1; i < 10; i++) {
+    let print = "";
+    for (let j = 1; j <= i; j++){
+        print += i;
+    }
+    console.log(print);
+}
+//count backwards by 5 from 100
+for(let i = 100; i >= 5; i -= 5){
+    console.log(i);
+}
