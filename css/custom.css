@@ -1,13 +1,9 @@
-* {
-    box-sizing: content-box;
 
+.pizza-img {
+    background-image: url("../img/pizza.png");
 }
 
-
-* {
-    @media all and screen (max-width: 1200px) and (min-width: 520px) ;
-}
-
-.nav{
-
+.pizza-img h1 {
+    background: white;
+    opacity: .6;
 }

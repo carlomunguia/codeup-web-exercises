@@ -5,70 +5,87 @@
     --light-bg: #FFF;
     --separator-color: #DDD;
 }
-
 * {
     box-sizing: border-box;
 }
-
 body, html {
     background-color: var(--main-bg);
-    position: absolute;
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
     font-family: Arial, Ubuntu, sans-serif;
 }
-
 header {
     background-image: url("https://loremflickr.com/1200/300");
     background-size: cover;
     min-height: 300px;
     padding-top: 275px;
 }
-
 a {
     color: var(--link-color);
 }
-
+.container {
+    margin-top: 2em;
+}
 .top-nav {
     background: var(--light-bg);
     position: fixed;
     width: 100%;
     z-index: 1;
-
 }
-
 .nav {
     list-style-type: none;
+    padding: 0;
     margin: 0;
-    display: inline-block;
 }
-
 .nav-link {
     color: var(--main-link-color);
     font-weight: bold;
     text-decoration: none;
-
-
 }
-
+.nav-item {
+    display: inline-block;
+    padding: 1.5em;
+}
 .nav-link:hover {
     color: var(--link-color);
 }
-
-.nav-item {
-    padding: 1.5em;
-    display: inline-block;
-}
-
 .profile {
     background: var(--light-bg);
-    height: 100%;
-    float: left;
-    width: 25%;
-
+    height: 80px;
 }
+.profile-image{
+    position: absolute;
+    top: 244px;
+}
+.profile-form {
+    line-height: 80px
+}
+.profile-items {
+    list-style: none;
+    padding: 0;
+}
+
+.profile-entry {
+    margin: .5em;
+}
+
+.profile-details,
+.timeline,
+.who-to-follow {
+    float: left;
+    margin: 0 .5em;
+}
+
+.profile-details,
+.who-to-follow {
+    width: calc(25% - 1em);
+}
+.timeline {
+    width: calc(50% - 1em);
+}
+
 
 .btn {
     border: 1px solid var(--main-link-color);
@@ -77,83 +94,35 @@ a {
     font-weight: bold;
     padding: 8px;
     border-radius: 5px;
-    position: absolute;
-    float: right;
 }
-
 .btn-large {
     font-size: 1.3em;
     padding: 10px;
-    float: right;
-}
-
-.img-circle {
-    border-radius: 100%;
-    border: 4px solid var(--light-bg);
-}
-
-.text-right {
-    float: right;
-}
-
-.text-muted {
-    color: var(--main-link-color);
-}
-
-.profile-image {
-    position: absolute;
-    margin-left: .5em;
-    margin-right: .5em;
-    top: 235px;
-}
-
-.timeline {
-    margin-left: .5em;
-    margin-right: .5em;
-    width: calc(50% - 1em);
-    float: none;
-}
-
-.who-to-follow {
-    margin-left: .5em;
-    margin-right: .5em;
-    width: calc(25% - 1em);
-    float: right;
-}
-
-#container {
-    margin-top: 2em;
-    float: right;
-}
-
-.profile-form {
-    line-height: 80px;
 }
 
 .media {
     width: 100%;
     background-color: var(--light-bg);
     border: 1px solid var(--separator-color);
-    padding: 1em;
-    float: right;
+    padding: .5em;
     overflow: auto;
 }
-
-.media-image{
+.media-image {
     width: 50px;
     float: left;
     margin: 1.33em 0 0 0;
 }
-
-.media-body{
+.media-body {
     float: left;
-    width: calc(100% - 50px;
-}
+    width: calc(100% - 50px);
 
-.profile-items{
-    list-style: none;
 }
-
-.profile-entry{
-    margin:.5em;
+.img-circle {
+    border-radius: 100%;
+    border: 4px solid var(--light-bg);
 }
+.text-right {
+    text-align: right;
+}
+.text-muted {
+    color: var(--main-link-color);
