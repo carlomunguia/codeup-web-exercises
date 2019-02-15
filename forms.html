@@ -1,57 +1,74 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>Register with Us</title>
-    <link rel="stylesheet" href="css/forms.css">
+    <title>Veridian Dynamics: Register</title>
 </head>
-
 <body>
 
-<div>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <h1>Register with Us</h1>
-</div>
-<br>
+<header>
+    <h1>Register With Us</h1>
+</header>
 
-<div>
-    <form id="email" id="Bio" method="POST" action="https://request-inspector.glitch.me/">
-        <input label="Email Address" type="email" name="Email" placeholder="Enter Email Address">
-        <input label="Password" type="password" name="password" placeholder="Password">
-    </form>
-</div>
+<main>
 
-<br>
-<div>
-    <textarea name="Bio" placeholder="Please fill this Out" cols="50"></textarea>
-</div>
+    <form method="POST" action="https://request-inspector.glitch.me/">
 
-<br>
-
-<div>
-    <fieldset>
-        <legend>How did you hear about us?</legend>
         <div>
-            Billboard <input type="radio" name="Billboard" value="Billboard">
-            Radio Advertisement <input type="radio" name="Radio Advertisement" value="Radio Advertisement">
-            Internet Advertisement <input type="radio" name="Internet Advertisement" value="Internet Advertisement">
-            Other <input type="radio" name="Other" value="Other">
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" placeholder="Please enter email">
         </div>
-</div>
-</fieldset>
 
-<br>
-<div>
-    <label for="Browser">What Browser are you using?</label>
-    <select id="Browser" name="Browser">
-        <option value="Chrome">Chrome</option>
-        <option value="Firefox">Firefox</option>
-        <option value="Safari">Safari</option>
-        <option value="Other"> Other</option>
-    </select>
-</div>
+        <div>
+            <label for="password">Password</label>
+            <input id="password" type="password" name="password" placeholder="Please enter password">
+        </div>
+
+        <div>
+            <label for="bio">Bio</label>
+            <div>
+                <textarea id="bio" name="bio" id="bio" cols="30" rows="10" placeholder="Please enter bio"></textarea>
+            </div>
+        </div>
+
+        <!-- use radio input types for limiting to one selection and checkbox input types for multiple selections -->
+        <fieldset>
+            <legend>How did you hear about us?</legend>
+            <label for="billboard">
+                <input id="billboard" type="radio" name="marketing" value="billboard"> billboard
+            </label>
+            <br>
+            <label for="radio-ad">
+                <input id="radio-ad" type="radio" name="marketing" value="radio_ad"> radio advertisement
+            </label>
+            <br>
+            <label for="internet-ad">
+                <input id="internet-ad" type="radio" name="marketing" value="internet_ad"> internet advertisement
+            </label>
+            <br>
+            <label for="other">
+                <input id="other" type="radio" name="marketing" value="other"> other
+            </label>
+            <br>
+        </fieldset>
+
+        <label for="browser">Browser Selection</label>
+
+        <select name="browser" id="browser">
+            <option value="chrome">Chrome</option>
+            <option value="safari">Safari</option>
+            <option value="firefox">Firefox</option>
+        </select>
+
+        <div>
+            <button>Submit</button>
+        </div>
+
+    </form>
+
+</main>
+
 
 </body>
-
 </html>
