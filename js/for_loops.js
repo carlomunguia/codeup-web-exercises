@@ -27,6 +27,8 @@ for (let i = 1; i < 10; i++) {
         print += i;
     }
     console.log(print);
+    [-=p]
+    ]=k0l=p=
 }
 //count backwards by 5 from 100
 for(let i = 100; i >= 5; i -= 5){

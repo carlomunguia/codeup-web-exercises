@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOG OBJECT</title>
+</head>
+<body>
+
+
+
+
+<script>
+    function vaccinate(input){
+        this.shotRecords.unshift = {shot: input, date: 'Today'};
+    };
+    var superDog = {
+        breed: 'Husky',
+        weightInPounds: 33,
+        age: 3,
+        color: 'brindle',
+        sterilized: false,
+        shotRecords: [{shot: 'Rabies', date:'March'}, {shot: 'Parvo', date: 'January'}, { shot:'Anthrax', date: 'September'}],
+        bark: function (){
+            console.log('WOOF!');
+            },
+        getOlder: function(){
+            superDog.age += 1;
+        },
+        fix: function(){
+            if (sterilized === false){
+                superDog.sterilized = true;
+        }},
+
+        vaccinate: vaccinate}
+
+
+superDog.vaccinate("rabies");
+console.log(superDog);
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
