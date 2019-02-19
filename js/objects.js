@@ -32,14 +32,6 @@ console.log(person.sayHello);
 
 
 
-
-
-
-
-
-``
-``
-
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -64,11 +56,21 @@ console.log(person.sayHello);
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+    function hebOffer(shoppers) {
+        shoppers.forEach(shopper => {
+            let discount = shopper.amount > 200 ? 0.12 : 0;
+            let moneyOff = shopper.amount * discount
+            console.log(`${shopper.name} bought an item for ${shopper.amount} 
+            and got ${moneyOff} dollars off and, 
+            in the end, he spent ${shopper.amount - moneyOff}`)
+        })
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -82,6 +84,16 @@ console.log(person.sayHello);
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    var books = [
+        { title: 'The Salmon of Doubt', author: 'Douglas Adams' },
+        { title: 'Walkaway', author: 'Cory Doctorow' },
+        { title: 'A Brief History of Time', author: 'Stephen Hawking' }
+    ]
+        books.forEach((book, index) => {
+            console.log(book.title);
+            console.log(index);
+        })
 
     /**
      * TODO:
