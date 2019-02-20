@@ -12,24 +12,18 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
-    var person = {
-        firstName: 'Carlo',
-        lastName: 'Munguia',
-    };
-
-    console.log(person.firstName);
-    console.log(person.lastName);
-
-var sayHello = (firstName.lastName);
-sayHello ();
-
-console.log(person.sayHello);
-
-
-
-
-
-
+//     var person = {
+//         firstName: 'Carlo',
+//         lastName: 'Munguia',
+//     };
+//
+//     console.log(person.firstName);
+//     console.log(person.lastName);
+//
+// var sayHello = (firstName.lastName);
+// sayHello ();
+//
+// console.log(person.sayHello);
 
 
     /**
@@ -72,63 +66,85 @@ console.log(person.sayHello);
         })
 
 
-    /** TODO:
-     * Create an array of objects that represent books and store it in a
-     * variable named `books`. Each object should have a title and an author
-     * property. The author property should be an object with properties
-     * `firstName` and `lastName`. Be creative and add at least 5 books to the
-     * array
-     *
-     * Example:
-     * > console.log(books[0].title) // "The Salmon of Doubt"
-     * > console.log(books[0].author.firstName) // "Douglas"
-     * > console.log(books[0].author.lastName) // "Adams"
-     */
+        /** TODO:
+         * Create an array of objects that represent books and store it in a
+         * variable named `books`. Each object should have a title and an author
+         * property. The author property should be an object with properties
+         * `firstName` and `lastName`. Be creative and add at least 5 books to the
+         * array
+         *
+         * Example:
+         * > console.log(books[0].title) // "The Salmon of Doubt"
+         * > console.log(books[0].author.firstName) // "Douglas"
+         * > console.log(books[0].author.lastName) // "Adams"
+         */
 
-    var books = [
-        { title: 'The Salmon of Doubt', author: 'Douglas Adams' },
-        { title: 'Walkaway', author: 'Cory Doctorow' },
-        { title: 'A Brief History of Time', author: 'Stephen Hawking' }
-    ]
+        var books = [
+            {title: 'The Salmon of Doubt', author: 'Douglas Adams'},
+            {title: 'Walkaway', author: 'Cory Doctorow'},
+            {title: 'A Brief History of Time', author: 'Stephen Hawking'}
+        ]
         books.forEach((book, index) => {
             console.log(book.title);
             console.log(index);
+            console.log(book.author);
+            console.log("---");
         })
 
-    /**
-     * TODO:
-     * Loop through the books array and output the following information about
-     * each book:
-     * - the book number (use the index of the book in the array)
-     * - the book title
-     * - author's full name (first name + last name)
-     *
-     * Example Console Output:
-     *
-     *      Book # 1
-     *      Title: The Salmon of Doubt
-     *      Author: Douglas Adams
-     *      ---
-     *      Book # 2
-     *      Title: Walkaway
-     *      Author: Cory Doctorow
-     *      ---
-     *      Book # 3
-     *      Title: A Brief History of Time
-     *      Author: Stephen Hawking
-     *      ---
-     *      ...
-     */
+function createBook(title,firstName, lastName ){
+            var book = {};
+            book.title = title;
+            book.author = {};
+            book.author.firstName = firstName;
+            book.author.lastName = lastName;
+            return book;
+}
+        /**
+         * TODO:
+         * Loop through the books array and output the following information about
+         * each book:
+         * - the book number (use the index of the book in the array)
+         * - the book title
+         * - author's full name (first name + last name)
+         *
+         * Example Console Output:
+         *
+         *      Book # 1
+         *      Title: The Salmon of Doubt
+         *      Author: Douglas Adams
+         *      ---
+         *      Book # 2
+         *      Title: Walkaway
+         *      Author: Cory Doctorow
+         *      ---
+         *      Book # 3
+         *      Title: A Brief History of Time
+         *      Author: Stephen Hawking
+         *      ---
+         *      ...
+         */
 
-    /**
-     * Bonus:
-     * - Create a function named `createBook` that accepts a title and author
-     *   name and returns a book object with the properties described
-     *   previously. Refactor your code that creates the books array to instead
-     *   use your function.
-     * - Create a function named `showBookInfo` that accepts a book object and
-     *   outputs the information described above. Refactor your loop to use your
-     *   `showBookInfo` function.
-     */
+    //     /**
+    //      * Bonus:
+    //      * - Create a function named `createBook` that accepts a title and author
+    //      *   name and returns a book object with the properties described
+    //      *   previously. Refactor your code that creates the books array to instead
+    //      *   use your function.
+    //
+    //      function createBook(title,firstName, lastName){
+    //         cons
+    //      }
+    //
+    //
+    //
+    //
+    //
+    //      * - Create a function named `showBookInfo` that accepts a book object and
+    //      *   outputs the information described above. Refactor your loop to use your
+    //      *   `showBookInfo` function.
+    //      */
+    // }
 
-// })();
+function showBookInfo = {
+
+}
