@@ -1,3 +1,4 @@
 .idea/*git
 *.iml
 secret.txt
+**keys.js
