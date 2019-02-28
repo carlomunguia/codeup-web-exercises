@@ -2,41 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mapbox 1</title>
-
+    <title>Mapbox 2</title>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
 
 </head>
 <body>
 
-
 <div id='map' style='width: 100%; height: 300px;'></div>
+
+
+
 
 <script src="js/keys.js"></script>
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
 <script>
+
     mapboxgl.accessToken = mapBoxGlToken;
 
     var map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/satellite-streets-v9',
-        zoom: 14,
-        center: [-95.1238, 29.7052]
+        style: 'mapbox://styles/mapbox/satellite-v9',
+        zoom: 16,
+        center: [-77.0502, 38.8893]
     })
-
-    setTimeout(function () {
-        map.setZoom(3).setCenter([-95.1238, 29.7052]);
-    }, 5000);
 
     var marker = new mapboxgl.Marker();
 
-    marker.setLngLat([-98.4896, 29.4626])
+    marker.setLngLat([-77.0502, 38.8893]);
     marker.addTo(map);
 
-    setTimeout(function () {
-        marker.setLngLat([-95.1238, 29.7052]);
-    }, 3000);
+    var popup = new mapboxgl.Popup()
 </script>
+
 
 </body>
 </html>

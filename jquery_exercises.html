@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQUERY EXERCISE</title>
+</head>
+<body>
+<h1>THE ZEN OF RUBY: What's cool about it?</h1>
+<p class="codeup">
+    WELL LET ME TELL YOU!
+</p>
+<div id="codeup" class="codeup">
+    <ul id="rubylist" class="codeup">
+        <li>Everything in Ruby is an Object - 100% OOP language!</li>
+        <li>It was created in 1995 by Matz Matsumoto in Tokyo, Japan!</li>
+        <li>Simple, elegant, concise syntax! </li>
+        <li>Works in conjunction with the Rails(Ruby on Rails) platform to develop desktop web applications!</li>
+        <li>Making a resurgence as Python becomes popular, as these two languages are Yin to each others Yang</li>
+    </ul>
+</div>
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+<script>
+    $('h1').click(function(e) {
+        $(this).css('background-color', '#FF0');
+    });
+
+    $('p').dblclick(function(e) {
+        $(this).css('font-size', '18px');
+    });
+
+    $('li').hover(
+        function() {
+            $(this).css('background-color', 'red');
+        },
+        function() {
+            $(this).css('background-color', 'black');
+        }
+    );
+
+    $(document).keydown(function(e) {
+        console.log(e.key);
+    });
+
+    $(document).off('keydown');
+
+</script>
+</body>
+</html>

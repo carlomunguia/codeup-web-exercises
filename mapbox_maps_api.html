@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox Maps API </title>
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.2/mapbox-gl-geocoder.css' type='text/css'/>
+</head>
+<body>
+
+<div id='map' style='width: 100%; height: 500px;'></div>
+
+
+<script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.2/mapbox-gl-geocoder.min.js'></script>
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<script>
+
+    mapboxgl.accessToken = mapBoxGlToken;
+
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/satellite-v9',
+        zoom: 10,
+    })
+
+    geocode("11203 West Ave, San Antonio, TX 78213", mapBoxGlToken).then(function(result) {
+        console.log(result);
+        map.setCenter(result);
+        map.setZoom(17);
+    });
+
+
+
+
+
+
+</script>
+</body>
+</html>
