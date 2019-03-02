@@ -2,30 +2,97 @@
 <html>
 <head>
     <title>Konami Code</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </head>
-<body>
-<h1>Konami Code</h1>
+<body class="bg-info">
+<h1 class="card bg-danger display-1 d-flex text-align-center">DEMONSTRATE YOUR KONAMI CODE ABILITY, HUMAN</h1>
+<form class="card display-1 d-flex justify-content-center">
+<input id="konami-search" type="search" class="bg-warning" placeholder="ENTER THE KONAMI CODE">
+</form>
+<!--<style>-->
+    <!--body{-->
+        <!--font-family: "Coiny Cyrillic", sans-serif;-->
+    <!--}-->
 
-<script
-        src="https://code.jquery.com/jquery-3.3.1.js"
-        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-        crossorigin="anonymous"></script>
+<!--</style>-->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 <script>
     "use strict";
+
 var userInput = "";
 
 
-    $(document).keyup(function(e){
+    $(document).ready(function () {
+        $(":text").keyup(function () {
+            $("#konami-search").text($(":text").val());
+        });
+    });
+
+    $('body').css('font-family', 'Futura')
+
+
+    $(document).keyup(function(e) {
         console.log(e.key);
         userInput += e.key;
         console.log(userInput);
 
-        if(userInput == 'ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightabEnter'){
+        if (userInput == 'ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightbaEnter') {
             alert("YOU'VE RECEIVED 30 MORE LIVES!!!!!!!!!!");
+            setTimeout(function () {
+                $('h1').css('font-family', 'American Typewriter, sans-serif');
+            }, 1000);
+            setTimeout(function () {
+                $('#konami-search').css('font-family', 'Coiny Cyrillic, sans-serif');
+            }, 1100);
+            setTimeout(function () {
+                $('h1').css('font-family', 'Signpainter, cursive');
+            }, 1200);
+            setTimeout(function () {
+                $('#konami-search').css('font-family', 'Andale, monospace');
+            }, 1300);
+            setTimeout(function () {
+                $('h1').css('font-family', 'American Typewriter, monospace');
+            }, 1300);
+            ;
+            setTimeout(function () {
+                $('h1').css('font-family', 'Georgia, serif');
+            }, 1400);
+            setTimeout(function () {
+                $('h1').css('font-family', 'American Typewriter, sans-serif');
+            }, 1500);
+            setTimeout(function () {
+                $('h1').css('font-family', 'Coiny Cyrillic, sans-serif');
+            }, 1600);
+            setTimeout(function () {
+                $('h1').css('font-family', 'Signpainter, cursive');
+            }, 1700);
+            setTimeout(function () {
+                $('h1').css('font-family', 'Andale, monospace');
+            }, 1800);
+            setTimeout(function () {
+                $('h1').css('font-family', 'American Typewriter, monospace');
+            }, 1900);
+            setTimeout(function () {
+                $('h1').css('font-family', 'American Typewriter, sans-serif');
+            }, 2000);
+            setTimeout(function () {
+                $('h1').css('font-family', 'Coiny Cyrillic, sans-serif');
+            }, 2100);
+            setTimeout(function () {
+                $('h1').css('font-family', 'Signpainter, cursive');
+            }, 2200);
+            setTimeout(function () {
+                $('h1').css('font-family', 'Andale, monospace');
+            }, 2300);
+            setTimeout(function () {
+                $('h1').css('font-family', 'American Typewriter, monospace');
+            });
         }
+    })
 
 
-    });
 
 
 
