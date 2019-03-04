@@ -6,6 +6,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </head>
 <body>
+<div>
+    <h1 class="card bg-secondary">WOULD YOU LIKE TO SIGN UP FOR OUR NEWSLETTER? HELL NO, RIGHT?</h1>
+    <span class="btn btn-large bg-danger ml-4"> X </span>
+</div>
+<button class="btn btn-large bg-warning ml-5 font-bold">
+    CLICK BUTTON
+</button>
 <ul>
     <li>How old is the National Park System?
         The National Park Service was created by an act signed by President Woodrow Wilson on August 25, 1916. Yellowstone National Park was established by an act signed by President Ulysses S. Grant on March 1, 1872, as the nation's first national park. View the National Park System timeline.</li>
@@ -41,18 +48,88 @@
 
     </li>
 </ul>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<ul>
+    <h3>Glacier National Park</h3>
+    <li>1. Glacier National Park is a part of the world’s first international peace park. The vision for a park was to celebrate peace and friendship between the United States and Canada. In 1932 Glacier and Waterton Lakes National Park in Alberton, Canada, were designated the Waterton-Glacier International Peace Park. Today, the parks collaborate seamlessly in their preservation, fire management, and research efforts. Learn more about Glacier’s international designations.
+    </li>
+    <li>2. Glacier straddles the Continental Divide, allowing for extreme weather. That’s because the opposing Pacific and Arctic airs meet at the Divide, creating a dramatic clash of weather. In one instance just outside the park’s eastern boundary in Browning, Montana, the temperature was noted as dropping 100 degrees in just 24 hours. When heading out for a day in the park, be sure to bring rain gear and extra clothes.
+
+    </li>
+    <li>3. Going-to-the-Sun Road is a spectacular marvel and a must see on your trip to Glacier. Going-to-the-Sun Road connects the east and west sides through the middle of the park, crossing the Continental Divide at Logan Pass. Covering 50 miles of awe-inspiring landscapes, glaciers, and cascading waterfalls, this drive is certainly a quintessential part of your visit.
+
+    </li>
+    <li>4. Evidence of human use in the area dates back over 12,000 years. Archeological evidence shows human occupation of this landscape dating back to the retreat of the Ice Age glaciers 12,000 years ago. These mountains still hold spiritual significance for the local Blackfeet, Salish, and Kootenai Tribes.
+    </li>
+</ul>
+
+<ul>
+    <h3>Big Bend National Park</h3>
+    <li>Throughout history there have been a variety of Native tribes and explorers that have passed through the region now called Big Bend National Park. These people have included the Apache Indians, Comanche Indians, Spanish explorers, soldiers and revolutionaries from Mexico and the United States, outlaws, ranchers, and farmers.
+    </li>
+    <li>The Rio Grande River runs through Big Bend National Park. The park is named Big Bend after the river's big bend in west Texas.
+    </li>
+    <li>
+    Big Bend National Park is considered to be the largest Chihuahuan Desert protected region in the country.
+    </li>
+    <li>
+        Langford Hot Springs are located in Big Bend National Park. The temperature of the spring is approximately 105 degrees Fahrenheit.
+    </li>
+</ul>
+<ul>
+    <h3>Saguaro National Park</h3>
+    <li>In 1934, a year after creating Saguaro National Monument, visitors to the park was 2,500 people. In 1993 more than 800,000 visited the park. In 2012 that number was just over 634,000 visitors.</li>
+    <li>The highest recorded temperature at Saguaro National Park was 117 degrees Fahrenheit in 1990.
+    </li>
+    <li>Saguaro National Park is home to more than 1,160 plant species including everything ranging from cacti, creosote, and other desert plants, to ponderosa pine and Douglas fir in the mountains.
+    </li>
+    <li>Reptiles that can be found in the desert of Saguaro National Park include desert spiny lizards, western coral snakes, Gila monsters, rattlesnakes (six known species), eastern collared lizards, and desert tortoises.
+    </li>
+</ul>
+<h2 class="registerClass">REGISTER, YO</h2>
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 <script>
 
+    // $(document).ready(function() {
+    //     $('li').click(function(event) {
+    //         event.preventDefault();
+    //         $('li').addClass('invisible');
+    //     });
+    // });
     $(document).ready(function() {
-        $('li').click(function(event) {
-            event.preventDefault();
-            $('li').addClass('invisible');
+        $('button').click(function(event) {
+            $('ul').each(function(index, element) {
+                $(element).children().last().css('background-color', '#FF0');
+            });
         });
     });
 
+    $(document).ready(function() {
+        $('h3').click(function(event) {
+            $('h3').each(function(index, element) {
+                $(element).css('font-weight', 'bold');
+            });
+        });
+    });
+
+    $(document).ready(function() {
+        $('li').click(function () {
+            $(this).parent().children().first().css('color', 'blue');
+        });
+    });
+
+    $('span').click(function(e) {
+        $('div').hide(2000);
+    });
+
+    $('ul').click(function(e) {
+        $('h3').fadeToggle(3000);
+    });
+
+    $('registerClass').hide(8000).show(8000);
 
 </script>
 
