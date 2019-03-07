@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax blog</title>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="css/ajax-blog.css" rel="stylesheet">
+</head>
+
+<!--MAIN VISUAL DETAILS-->
+<body class="bg-secondary">
+<img class="img-thumbnail float-right bg-secondary btn btn-sm" src="img/tomster-twitter-card.png" alt="Thumbnail image">
+<h1 class="display-3 bg-secondary text-center pacifico navbar nav-pill ">tomster's ember blog!</h1>
+
+<!--EMPTY DIVS FOR DATA INJECTION-->
+<div id="posts"></div>
+<div id="posts"></div>
+
+<!--BOOTSTRAP/JQUERY CDNS-->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+
+<script>
+
+    var jqXhr = $.get('data/blog.json');
+
+    function buildTableHtml(items) {
+        var html = '';
+
+
+        items.forEach(function (item) {
+            html += '<div class="text-center display-4 container bg-secondary float-left">';
+            html += '<h1 class="font-bold bg-secondary display-3 w-100">' + item.title + '</h1>';
+            html += '<div class="font-italic bg-warning display-4 button">' + item.content + '</div>';
+            html += '<li class="bg-danger display-4 float-right card w-100 ">' + item.categories.join(', ') + '</li>';
+            html += '</div>';
+
+            $("div").click(function () {
+                $("div").slideToggle(3500);
+            });
+        });
+        return html;
+    }
+
+    jqXhr.done(function (items) {
+        $('#posts').html(buildTableHtml(items));
+    });
+
+</script>
+
+
+</body>
+</html>

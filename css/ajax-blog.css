@@ -1,0 +1,16 @@
+body {
+    font-family: "Oswald", serif;
+}
+.pacifico {
+    font-family: "Pacifico", cursive;
+}
+
+h2, h1 {
+    font-family: "Righteous", sans-serif;
+    font-weight: bold;
+    transform: a
+}
+
+img {
+    z-index: 1;
+}
