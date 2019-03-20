@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WEATHER MAP PROJECT - MOONRISE KINGDOM</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet'/>
+
+    <style>
+        #search-city {
+            float: left;
+            position: absolute;
+            z-index: 1;
+            left: 1em;
+            top: 1em;
+        }
+
+        h1 {
+            font-family: 'Futura', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-secondary">
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.4/mapbox-gl-geocoder.min.js'></script>
+<link rel='stylesheet'
+      href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.4/mapbox-gl-geocoder.css'
+      type='text/css'/>
+
+<div class="container bg-secondary">
+    <h1 class="display-4 text-center bg-secondary">WEATHER MAP - MOONRISE KINGDOM</h1>
+
+    <div class="row ">
+        <div class="col border text-center">
+            <h2 id="temp1" class="text-center"></h2>
+            <image id="icon1" class="text-center"></image>
+            <h4 id="weather1" class="text-center"></h4>
+            <h4 id="humidity1" class="text-center"></h4>
+            <h4 id="wind1" class="text-center"></h4>
+            <h4 id="pressure1" class="text-center"></h4>
+        </div>
+        <div class="col border text-center">
+            <h2 id="temp2" class="text-center"></h2>
+            <image id="icon2" class="text-center"></image>
+            <h4 id="weather2" class="text-center"></h4>
+            <h4 id="humidity2" class="text-center"></h4>
+            <h4 id="wind2" class="text-center"></h4>
+            <h4 id="pressure2" class="text-center"></h4>
+        </div>
+        <div class="col border text-center ">
+            <h2 id="temp3" class="text-center"></h2>
+            <image id="icon3" class="text-center"></image>
+            <h4 id="weather3" class="text-center"></h4>
+            <h4 id="humidity3" class="text-center"></h4>
+            <h4 id="wind3" class="text-center"></h4>
+            <h4 id="pressure3" class="text-center"></h4>
+
+        </div>
+
+
+    </div>
+    <!-- map div -->
+    <div id='map' style='width: 100%; height: 450px;'></div>
+</div>
+
+
+</div>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<script src="../weather-map/js/keys.js"></script>
+<script>
+
+    var icons = {
+        'clear-day': "img/icons/animated/day.svg",
+        'clear-night': "img/icons/animated/night.svg",
+        'rain': "img/icons/animated/rainy-1.svg",
+        'snow': "img/icons/animated/snowy-1.svg",
+        'sleet': "img/icons/animated/snowy-2.svg",
+        'wind': "img/icons/animated/weather_sunset.svg",
+        'fog': "img/icons/animated/weather.svg",
+        'cloudy': "img/icons/animated/cloudy.svg",
+        'partly-cloudy-day': "img/icons/animated/cloudy-day-1.svg",
+        'partly-cloudy-night': "img/icons/animated/cloudy-night-1.svg",
+    };
+    defaultCoords = [-98.4936, 29.4241];
+
+    recenter(defaultCoords[0], defaultCoords[1])
+
+    mapboxgl.accessToken = mapBoxToken;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/satellite-streets-v9',
+        zoom: 4,
+        center: defaultCoords
+    });
+
+
+    var marker = new mapboxgl
+        .Marker({ draggable: true })
+        .setLngLat(defaultCoords)
+        .addTo(map);
+
+    function responseDone(response) {
+        for (var i = 0; i < 3; i++) {
+            var day = response.responseJSON.day.data[i],
+                highTemp = Math.round(day.temperatureHigh),
+                lowTemp = Math.round(day.temperatureLow);
+            $("#temp" + (i + 1)).html(highTemp + "&#8457; / " + lowTemp + "&#8457;");
+            $('#weather' + (i + 1)).html(day.summary);
+            $('#wind' + (i + 1)).html("Wind: " + day.windSpeed + " mph");
+            $('#pressure' + (i + 1)).html("Pressure: " + day.pressure);
+            $('#humidity' + (i + 1)).html("Humidity: " + day.humidity);
+            $('#icon' + (i + 1)).attr('src', icons[day.icon]);
+        }
+    }
+
+    function onDragEnd() {
+        var lngLat = marker.getLngLat();
+        map.setCenter(lngLat);
+        recenter(lngLat.lat, lngLat.lng)
+    }
+
+    function recenter(lat, lng) {
+        var newResponse = $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyToken + "/" + lat.toString() + "," + lng.toString() + "");
+        newResponse.done(function () {
+            responseDone(newResponse);
+        });
+    }
+
+    marker.on('dragend', onDragEnd);
+
+    map.addControl(new MapboxGeocoder({
+        accessToken: mapboxgl.accessToken
+    }));
+
+    $(document).keyup(function (event) {
+        if (event.which === 13) {
+            var newCenter = map.getCenter()
+            recenter(newCenter.lat, newCenter.lng)
+        }
+    });
+
+</script>
+
+</body>
+</html>
