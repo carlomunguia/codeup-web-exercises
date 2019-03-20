@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ajax blog</title>
+    <title>TOMSTER'S BLOG!</title>
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
@@ -41,11 +41,20 @@
 
 
         items.forEach(function (item) {
-            html += '<div class="text-center display-4 container bg-secondary float-left">';
-            html += '<h1 class="font-bold bg-secondary display-3 w-100">' + item.title + '</h1>';
-            html += '<div class="font-italic bg-warning display-4 button">' + item.content + '</div>';
-            html += '<li class="bg-danger display-4 float-right card w-100 ">' + item.categories.join(', ') + '</li>';
+            html += '<div class="text-center col bg-secondary float-left ">';
+            html += '<h1 class="font-bold bg-info btn btn-lg float-left">' + item.title + '</h1>';
+            html += '<p class="font-italic bg-warning btn btn-sm float-right">' + item.date + '</p>';
+            html += '<div class="font-italic bg-warning button jumbotron">' + item.content + '</div>';
+            // html += '<p class="bg-danger float-right btn btn-md">' + item.categories + '</p>';
             html += '</div>';
+
+            $('.navbar').click(function () {
+                $('.navbar').fadeToggle(3500);
+            })
+
+            $(".btn").click(function () {
+                $("img").slideUp(3500);
+            })
 
             $("div").click(function () {
                 $("div").slideToggle(3500);

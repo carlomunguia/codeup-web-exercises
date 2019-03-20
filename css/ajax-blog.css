@@ -8,9 +8,12 @@ body {
 h2, h1 {
     font-family: "Righteous", sans-serif;
     font-weight: bold;
-    transform: a
 }
 
 img {
     z-index: 1;
+}
+
+.nav-pill {
+    color: orangered;
 }
