@@ -63,13 +63,14 @@ users.forEach(function(user) {
   developers.push(`${name}'s email is ${email}.${name} knows ${'languages.join(', '));
 });
 
-// TODO: Use `let` for the following variable
-let list = '<ul>';
+TODO: Use `let` for the following variable
+
+let list = `'<ul>'`;
 
 // TODO: rewrite the following loop to use a for..of loop
-developers.for(let <li> of developer) {
 
-  // TODO: rewrite the assignment below to use template strings
-  list += '<li>' + developer + '</li>';
+developers.for`(let <li> of developer)` {
+  TODO: rewrite the assignment below to use template strings
+  list `+= `'<li>' + developer + '</li>'`;
 });
-list += '</ul>';
+list += `'</ul>'`;
